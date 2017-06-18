@@ -1,0 +1,3 @@
+{:require  [quil-snake.app]
+ :init-fns [quil-snake.app/init]
+ :compiler-options {:asset-path "js/app.out"}}
