@@ -13,6 +13,7 @@ dependencies:
     - cd $HOME/bin && curl -fsSLo boot https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && chmod 755 boot
   override:
     - cd basic-snake && boot prod
+    - cd quil-snake && boot prod
   cache_directories:
     - $HOME/.m2
     - $HOME/.boot

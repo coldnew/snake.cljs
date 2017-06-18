@@ -12,6 +12,11 @@ A simple snake game implement in ClojureScript for tutorial.
 
     [Online DEMO](https://coldnew.github.io/snake.cljs)
 
+- [quil-snake](https://github.com/coldnew/snake.cljs/tree/master/quil-snake)
+
+    snake game implement with [quil](https://quil.info)
+
+    [Online DEMO](https://coldnew.github.io/snake.cljs/quil)
 
 ## Screenshot
 
