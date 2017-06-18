@@ -5,6 +5,10 @@ A simple snake game implement in ClojureScript for tutorial.
 
 - [basic-snake](https://github.com/coldnew/snake.cljs/tree/master/basic-snake) - A basic snake game only use traditional html method. (Withoud react.js, vue.js ...etc)
 
+## Screenshot
+
+![Screenshot](https://raw.githubusercontent.com/coldnew/snake.cljs/master/screenshot.png)
+
 ## Development
 
 1. Install [boot-clj](https://boot-clj.com) for handle this project
