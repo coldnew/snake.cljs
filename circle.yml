@@ -18,6 +18,10 @@ dependencies:
     - $HOME/.boot
     - $HOME/bin
 
+test:
+  override:
+    - echo "test"
+
 deployment:
   publish:
     branch: master
