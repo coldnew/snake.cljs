@@ -16,10 +16,12 @@ mkdir -p $OUT
 
 # Deploy basic snake
 cd basic-snake
-cp README.* $OUT
 cp -R target/* $OUT
-cp -f ../circle.yml $OUT
 cd ..
+
+# Deploy project info
+cp -f circle.yml $OUT
+cp -f README.md $OUT
 
 # go to the out directory and create a *new* Git repo
 cd $OUT
