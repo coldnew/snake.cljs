@@ -59,16 +59,16 @@
   (comp (development)
         (run)))
 
+(deftask doc
+  "Generate documentation by marginalia"
+  []
+  (comp (marginalia)
+     (target)))
 
 (deftask prod
   "Simple alias to run application in production mode"
   []
   (comp (production)
      (cljs)
-     (target)))
-
-(deftask doc
-  "Generate documentation by marginalia"
-  []
-  (comp (marginalia)
+     (marginalia)
      (target)))
