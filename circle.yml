@@ -1,0 +1,26 @@
+general:
+  branches:
+    ignore:
+      - gh-pages
+
+machine:
+  timezone: Asia/Taipei
+  java:
+    version: oraclejdk8
+
+dependencies:
+  pre:
+    - cd $HOME/bin && curl -fsSLo boot https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && chmod 755 boot
+  override:
+    - cd basic-snake && boot prod
+  cache_directories:
+    - $HOME/.m2
+    - $HOME/.boot
+    - $HOME/bin
+
+deployment:
+  publish:
+    branch: master
+    commands:
+      - sed -i 's%https://${GH_TOKEN}@${GH_REF}%git@github.com:coldnew/snake.cljs.git%g' deploy.sh
+      - ./deploy.sh
