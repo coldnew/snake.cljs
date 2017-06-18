@@ -10,10 +10,9 @@ DATE=$(date)
 
 # clear and re-create the out directory
 rm -rf $OUT || exit 0;
-git clone "https://${GH_TOKEN}@${GH_REF}" $OUT
 
-# remove all data in $OUT
-(cd $OUT; git checkout -b gh-pages origin/gh-pages ; git rm -rf *)
+# create repo directory
+mkdir -p $OUT
 
 # Deploy basic snake
 cd basic-snake
@@ -43,4 +42,4 @@ git commit -m "Deploy commit $ID to GitHub Pages: $DATE"
 # will be lost, since we are overwriting it.) We redirect any output to
 # /dev/null to hide any sensitive credential data that might otherwise be exposed.
 set -e
-git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" gh-pages:gh-pages > /dev/null 2>&1
+git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1
