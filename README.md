@@ -1,4 +1,8 @@
 # snake.cljs
+[![Circle CI](https://circleci.com/gh/coldnew/snake.cljs.svg?style=svg)](https://circleci.com/gh/coldnew/snake.cljs)
+[![Dependencies Status](https://jarkeeper.com/coldnew/snake.cljs/status.svg)](https://jarkeeper.com/coldnew/snake.cljs)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/coldnew/snake.cljs/master/LICENSE)
+
 A simple snake game implement in ClojureScript for tutorial.
 
 ## Implementation
