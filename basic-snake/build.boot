@@ -58,4 +58,5 @@
   "Simple alias to run application in production mode"
   []
   (comp (production)
+     (cljs)
      (target)))
