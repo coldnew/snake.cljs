@@ -1,3 +1,7 @@
+(task-options!
+ pom {:project 'quil-snake
+      :description "snake game implement with https://quil.info"})
+
 (set-env!
  :source-paths    #{"src/cljs"}
  :resource-paths  #{"resources"}
@@ -9,13 +13,15 @@
                  [org.clojure/tools.nrepl   "0.2.13"     :scope "test"]
                  [weasel                    "0.7.0"      :scope "test"]
                  [org.clojure/clojurescript "1.9.562"]
-                 [quil "2.6.0"]])
+                 [quil "2.6.0"]
+                 [it.frbracch/boot-marginalia "0.1.3-1" :scope "test"]])
 
 (require
  '[adzerk.boot-cljs      :refer [cljs]]
  '[adzerk.boot-cljs-repl :refer [cljs-repl start-repl]]
  '[adzerk.boot-reload    :refer [reload]]
- '[pandeiro.boot-http    :refer [serve]])
+ '[pandeiro.boot-http    :refer [serve]]
+ '[it.frbracch.boot-marginalia :refer [marginalia]])
 
 (deftask build
   "This task contains all the necessary steps to produce a build
@@ -54,4 +60,16 @@
   (comp (development)
         (run)))
 
+(deftask doc
+  "Generate documentation by marginalia"
+  []
+  (comp (marginalia)
+     (target)))
 
+(deftask prod
+  "Simple alias to run application in production mode"
+  []
+  (comp (production)
+     (cljs)
+     (marginalia)
+     (target)))

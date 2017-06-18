@@ -19,6 +19,12 @@ cd basic-snake
 cp -R target/* $OUT
 cd ..
 
+# Deploy quil-snake
+mkdir -p $OUT/quil
+cd quil-snake
+cp -R target/* $OUT/quil
+cd ..
+
 # Deploy project info
 cp -f circle.yml $OUT
 cp -f README.md $OUT
