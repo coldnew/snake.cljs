@@ -1,6 +1,6 @@
 (task-options!
  pom {:project 'basic-snake
-      :description "A basic snake game only use traditional html method. (Withoud react.js, vue.js ...etc)"})
+      :description "A basic snake game only use traditional html method. (Without react.js, vue.js ...etc)"})
 
 (set-env!
  :source-paths    #{"src/cljs"}

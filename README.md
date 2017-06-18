@@ -8,9 +8,9 @@ A simple snake game implement in ClojureScript for tutorial.
 
 - [basic-snake](https://github.com/coldnew/snake.cljs/tree/master/basic-snake)
 
-    A basic snake game only use traditional html method. (Withoud react.js, vue.js ...etc)
-    
-    [Online DEMO](https://coldnew.github.io/snake.cljs)    
+    A basic snake game only use traditional html method. (Without react.js, vue.js ...etc)
+
+    [Online DEMO](https://coldnew.github.io/snake.cljs)
 
 
 ## Screenshot
