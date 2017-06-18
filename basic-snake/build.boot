@@ -1,3 +1,7 @@
+(task-options!
+ pom {:project 'basic-snake
+      :description "A basic snake game only use traditional html method. (Withoud react.js, vue.js ...etc)"})
+
 (set-env!
  :source-paths    #{"src/cljs"}
  :resource-paths  #{"resources"}
@@ -8,13 +12,15 @@
                  [com.cemerick/piggieback   "0.2.1"      :scope "test"]
                  [org.clojure/tools.nrepl   "0.2.13"     :scope "test"]
                  [weasel                    "0.7.0"      :scope "test"]
-                 [org.clojure/clojurescript "1.9.562"]])
+                 [org.clojure/clojurescript "1.9.562"]
+                 [it.frbracch/boot-marginalia "0.1.3-1" :scope "test"]])
 
 (require
  '[adzerk.boot-cljs      :refer [cljs]]
  '[adzerk.boot-cljs-repl :refer [cljs-repl start-repl]]
  '[adzerk.boot-reload    :refer [reload]]
- '[pandeiro.boot-http    :refer [serve]])
+ '[pandeiro.boot-http    :refer [serve]]
+ '[it.frbracch.boot-marginalia :refer [marginalia]])
 
 (deftask build
   "This task contains all the necessary steps to produce a build
@@ -59,4 +65,10 @@
   []
   (comp (production)
      (cljs)
+     (target)))
+
+(deftask doc
+  "Generate documentation by marginalia"
+  []
+  (comp (marginalia)
      (target)))
