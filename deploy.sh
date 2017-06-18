@@ -4,7 +4,7 @@
 set -e
 
 # Local variables
-OUT="$(PWD)/.gh-pages"
+OUT="$(pwd)/.gh-pages"
 ID=$(git rev-parse --short HEAD)
 DATE=$(date)
 
