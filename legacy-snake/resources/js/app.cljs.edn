@@ -1,3 +1,0 @@
-{:require  [legacy-snake.app]
- :init-fns [legacy-snake.app/init]
- :compiler-options {:asset-path "js/app.out"}}

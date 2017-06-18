@@ -44,7 +44,7 @@
 
 (deftask development []
   (task-options! cljs {:optimizations :none}
-                 reload {:on-jsload 'legacy-snake.app/init})
+                 reload {:on-jsload 'basic-snake.app/init})
   identity)
 
 (deftask dev

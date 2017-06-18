@@ -1,4 +1,4 @@
-(ns legacy-snake.app
+(ns basic-snake.app
   (:require [goog.dom :as dom]
             [goog.events :as events]
             [goog.events.KeyCodes]
@@ -92,20 +92,20 @@
       (when-not (opposite-direction? new-direction direction)
         (swap! state assoc-in [:snake/direction] new-direction)))))
 
-(defn is-in-boundary?
+(defn out-of-boundary?
   "Check if axis is exceed the game board boundary."
   [[x y]]
   (let [max-x (/ (:canvas/width @state)  (:snake/width @state))
         max-y (/ (:canvas/height @state) (:snake/height @state))]
     (or (>= y max-y) (< y 0) (>= x max-x) (< x 0))))
 
-(defn is-self-collission?
+(defn self-collission?
   "Check if axis is collission with snake's body."
   [[x y]]
   (let [{:keys [:snake/body]} @state]
     (some #(axis-equal? [x y] %) body)))
 
-(defn is-eat-food?
+(defn eat-food?
   "Check if asix if equal the food's axis."
   [[x y]]
   (let [{:keys [:snake/food]} @state]
@@ -121,7 +121,7 @@
     (when (nil? food)
       ;; generate food axis
       (loop [food [(rand-int max-x) (rand-int max-y)]]
-        (if-not (is-self-collission? food)
+        (if-not (self-collission? food)
           (do
             (swap! state assoc-in [:snake/food] food)
             (draw food food-color)
@@ -139,12 +139,12 @@
     (generate-food)
 
     ;; Detect if snake
-    (when (is-self-collission? head)
+    (when (self-collission? head)
       (js/alert (str "Snake is collission with itself at : " head))
       (swap! state assoc-in [:snake/alive] false))
 
     ;; Detect if snake excessed the boundary
-    (when (is-in-boundary? head)
+    (when (out-of-boundary? head)
       (js/alert (str "Snake is out of boundary at :" head))
       (swap! state assoc-in [:snake/alive] false))
 
@@ -153,7 +153,7 @@
       ;; Draw head
       (draw head body-color)
       ;; Detect if food eat by snake or not
-      (if (is-eat-food? head)
+      (if (eat-food? head)
         ;; When food was eaten by snake, just increase it's head and not remove tail
         (swap! state assoc
                :snake/food nil
