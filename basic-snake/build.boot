@@ -54,3 +54,8 @@
         (run)))
 
 
+(deftask prod
+  "Simple alias to run application in production mode"
+  []
+  (comp (production)
+     (target)))
