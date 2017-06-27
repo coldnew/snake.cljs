@@ -25,6 +25,12 @@ cd quil-snake
 cp -R target/* $OUT/quil
 cd ..
 
+# Deploy slides
+mkdir -p $OUT/slides
+cd slides
+cp -R target/* $OUT/slides
+cd ..
+
 # Deploy project info
 cp -f circle.yml $OUT
 cp -f README.md $OUT

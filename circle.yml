@@ -14,6 +14,7 @@ dependencies:
   override:
     - cd basic-snake && boot prod
     - cd quil-snake && boot prod
+    - cd slides && boot prod
   cache_directories:
     - $HOME/.m2
     - $HOME/.boot
