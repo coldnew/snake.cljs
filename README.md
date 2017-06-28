@@ -18,6 +18,14 @@ A simple snake game implement in ClojureScript for tutorial.
 
     [Online DEMO](https://coldnew.github.io/snake.cljs/quil)
 
+## Tutorials
+
+- [(WIP)Slide](https://github.com/coldnew/snake.cljs/tree/master/slides)
+
+    Interactive slides based on [t3tr0s-slides](https://github.com/shaunlebron/t3tr0s-slides).
+
+   [View Online](https://coldnew.github.io/snake.cljs/slides/index.html)
+
 ## Screenshot
 
 ![Screenshot](https://raw.githubusercontent.com/coldnew/snake.cljs/master/screenshot.png)
