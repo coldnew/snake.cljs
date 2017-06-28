@@ -10,21 +10,23 @@ A simple snake game implement in ClojureScript for tutorial.
 
     A basic snake game only use traditional html method. (Without react.js, vue.js ...etc)
 
-    [Online DEMO](https://coldnew.github.io/snake.cljs)
+    [**Online DEMO**](https://coldnew.github.io/snake.cljs)
 
 - [quil-snake](https://github.com/coldnew/snake.cljs/tree/master/quil-snake)
 
     snake game implement with [quil](https://quil.info)
 
-    [Online DEMO](https://coldnew.github.io/snake.cljs/quil)
+    [**Online DEMO**](https://coldnew.github.io/snake.cljs/quil)
 
 ## Tutorials
 
-- [(WIP)Slide](https://github.com/coldnew/snake.cljs/tree/master/slides)
+- [Slide](https://github.com/coldnew/snake.cljs/tree/master/slides)
 
-    Interactive slides based on [t3tr0s-slides](https://github.com/shaunlebron/t3tr0s-slides).
+    Interactive slides based on [t3tr0s-slides](https://github.com/shaunlebron/t3tr0s-slides), I rewrite it for [Clojure/Taiwan](https://clojure.tw) meetup.
 
-   [View Online](https://coldnew.github.io/snake.cljs/slides/index.html)
+    > **This slide is still under construction and will be updated soon.**
+
+   [**View Slide Online**](https://coldnew.github.io/snake.cljs/slides/index.html)
 
 ## Screenshot
 
